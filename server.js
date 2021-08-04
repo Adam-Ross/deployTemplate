@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const {Pool} = require('pg')
-
+const pool = require('./db/db')
 const PORT = process.env.PORT || 3004
 
 // Middlewares
