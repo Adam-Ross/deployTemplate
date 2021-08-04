@@ -6,7 +6,7 @@ const cors = require("cors")
 
 const PORT = process.env.PORT || 3004
 
-console.log(process.env.NODE_ENV)
+const pr = process.env.NODE_ENV
 
 // Middlewares
 app.use(cors())
@@ -31,7 +31,10 @@ app.get('/api/students', async (req, res) => {
     }
 })
 
+app.get('/pr', (req, res) => {
+    console.log(pr)
+})
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
-})
+})  
