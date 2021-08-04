@@ -32,7 +32,7 @@ app.get('/api/students', async (req, res) => {
 })
 
 app.get('/pr', (req, res) => {
-    console.log(pr)
+    res.json({processIs: pr})
 })
 
 app.listen(PORT, () => {
