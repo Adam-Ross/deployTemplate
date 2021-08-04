@@ -6,6 +6,8 @@ const cors = require("cors")
 
 const PORT = process.env.PORT || 3004
 
+console.log(process.env.NODE_ENV)
+
 // Middlewares
 app.use(cors())
 app.use(express.static('public'))
