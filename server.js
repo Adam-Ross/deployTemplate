@@ -2,9 +2,12 @@ const express = require("express")
 const app = express()
 const {Pool} = require('pg')
 const pool = require('./db/db')
+const cors = require("cors")
+
 const PORT = process.env.PORT || 3004
 
 // Middlewares
+app.use(cors())
 app.use(express.static('public'))
 
 // const pool = new Pool({
