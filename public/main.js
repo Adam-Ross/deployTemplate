@@ -8,7 +8,7 @@ function loadEventListeners() {
 }
 
 async function getData() {
-    const res = await fetch('https://obscure-temple-03891.herokuapp.com/api/students')
+    const res = await fetch('/api/students')
     const data = await res.json()
     paintScreen(data)
 }
