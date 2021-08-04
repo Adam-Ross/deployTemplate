@@ -32,7 +32,11 @@ app.get('/api/students', async (req, res) => {
 })
 
 app.get('/pr', (req, res) => {
-    res.json({processIs: pr})
+    if(!process.env.NODE_ENV) {
+        res.send('no thing')
+    } else {
+        res.json({processIs: pr})
+    }
 })
 
 app.listen(PORT, () => {
